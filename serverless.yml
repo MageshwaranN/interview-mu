@@ -1,0 +1,22 @@
+
+service: moneyu # NOTE: update this with your service name
+
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+
+
+functions:
+  app:
+    handler: app.handler
+    # The `events` block defines how to trigger the http events
+    events:
+        - http: ANY /
+        - http: 'ANY {proxy+}'
+
+
+
+plugins:
+  - serverless-offline
