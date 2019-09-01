@@ -1,3 +1,5 @@
+org: mageshwarann
+app: personalapp
 
 service: moneyu # NOTE: update this with your service name
 
